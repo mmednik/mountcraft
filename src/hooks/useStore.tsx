@@ -5,10 +5,18 @@ export const useStore = create(set => ({
   texture: 'dirt',
   cubes: [{
     id: uuidv4,
-    pos: [1, 1, 1],
+    pos: [1, 0, 1],
     texture: 'dirt'
   }],
-  addCube: () => { },
+  addCube: (x, y, z) => {
+    set(state => ({
+      cubes: [...state.cubes, {
+        id: uuidv4,
+        texture: state.texture,
+        pos: [x, y, z]
+      }]
+    }))
+  },
   removeCube: () => { },
   setTexture: () => { },
   saveWorld: () => { },
