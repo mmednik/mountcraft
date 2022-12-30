@@ -12,3 +12,12 @@ body,
   user-select: none;
   overflow: hidden;
 }
+
+div.pointer {
+  position: absolute;
+  color: rgba(255,255,255,0.5);
+  font-size: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
